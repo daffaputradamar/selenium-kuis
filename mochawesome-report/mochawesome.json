@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-12-06T01:53:16.304Z",
+    "end": "2019-12-06T01:53:44.534Z",
+    "duration": 28230,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "fd4e5a16-0e0e-49a9-a8ad-a8e6749b3339",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "cf3f4037-07f0-4540-8348-3b5c44692c6d",
+        "title": "OrangeHRM login automated testing",
+        "fullFile": "G:\\Semester 5\\Pengujian Perangkat Lunak\\selenium-kuis\\test\\orangehrm.test.js",
+        "file": "\\test\\orangehrm.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "OrangeHRM login automated testing \"before each\" hook",
+            "timedOut": false,
+            "duration": 9292,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "orange = new orangehrm();\ndriver = orange.driver;\nawait orange.visit(\n  \"https://s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login\"\n);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4d0f47f4-2a65-45c9-b9f1-7d39f02ff429",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "OrangeHRM login automated testing \"after each\" hook",
+            "timedOut": false,
+            "duration": 2830,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await orange.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "1fb92711-1937-447a-b291-74fa2b2acce8",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "find the input box and login button",
+            "fullTitle": "OrangeHRM login automated testing find the input box and login button",
+            "timedOut": false,
+            "duration": 279,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await orange.findInputAndButton();\nexpect(result.usernameEnabled).to.equal(true);\nexpect(result.passwordEnabled).to.equal(true);\nexpect(result.buttonText).to.include(\"LOGIN\");",
+            "err": {},
+            "isRoot": false,
+            "uuid": "38e034a3-8b99-411e-ba53-6028fe863c6f",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "put keyword in form and click login",
+            "fullTitle": "OrangeHRM login automated testing put keyword in form and click login",
+            "timedOut": false,
+            "duration": 4385,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await orange.submitKeywordAndGetResult();\nexpect(result).to.include(\"Welcome Admin\");",
+            "err": {},
+            "isRoot": false,
+            "uuid": "846bbd63-5aca-471e-a998-8b8359a61047",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "38e034a3-8b99-411e-ba53-6028fe863c6f",
+          "846bbd63-5aca-471e-a998-8b8359a61047"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 4664,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
