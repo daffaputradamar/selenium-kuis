@@ -26,7 +26,7 @@ process.on("unhandledRejection", () => {});
         await orange.quit();
       });
 
-      it("find the input box and login button", async () => {
+      it("find the input box and login button and check if Welcome Admin exist", async () => {
         const result = await orange.findInputAndButton();
         expect(result.usernameEnabled).to.equal(true);
         expect(result.passwordEnabled).to.equal(true);
