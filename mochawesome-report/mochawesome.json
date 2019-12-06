@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2019-12-06T01:53:16.304Z",
-    "end": "2019-12-06T01:53:44.534Z",
-    "duration": 28230,
+    "start": "2019-12-06T02:03:39.272Z",
+    "end": "2019-12-06T02:04:58.944Z",
+    "duration": 79672,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "fd4e5a16-0e0e-49a9-a8ad-a8e6749b3339",
+    "uuid": "8e2d64fe-6f1d-45f6-9865-c38e8916b09a",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "cf3f4037-07f0-4540-8348-3b5c44692c6d",
+        "uuid": "f9dc0263-84e3-4855-992e-425688243ff6",
         "title": "OrangeHRM login automated testing",
         "fullFile": "G:\\Semester 5\\Pengujian Perangkat Lunak\\selenium-kuis\\test\\orangehrm.test.js",
         "file": "\\test\\orangehrm.test.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "OrangeHRM login automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 9292,
+            "duration": 19604,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "orange = new orangehrm();\ndriver = orange.driver;\nawait orange.visit(\n  \"https://s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login\"\n);",
             "err": {},
             "isRoot": false,
-            "uuid": "4d0f47f4-2a65-45c9-b9f1-7d39f02ff429",
+            "uuid": "c8675148-408a-44ff-94f9-75bcae135c4e",
             "isHook": true,
             "skipped": false
           }
@@ -54,14 +54,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "OrangeHRM login automated testing \"after each\" hook",
             "timedOut": false,
-            "duration": 2830,
+            "duration": 2176,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await orange.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "1fb92711-1937-447a-b291-74fa2b2acce8",
+            "uuid": "9e3de572-cfcf-46a8-a8e2-b8b881bb2001",
             "isHook": true,
             "skipped": false
           }
@@ -71,7 +71,7 @@
             "title": "find the input box and login button",
             "fullTitle": "OrangeHRM login automated testing find the input box and login button",
             "timedOut": false,
-            "duration": 279,
+            "duration": 254,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -80,15 +80,15 @@
             "code": "const result = await orange.findInputAndButton();\nexpect(result.usernameEnabled).to.equal(true);\nexpect(result.passwordEnabled).to.equal(true);\nexpect(result.buttonText).to.include(\"LOGIN\");",
             "err": {},
             "isRoot": false,
-            "uuid": "38e034a3-8b99-411e-ba53-6028fe863c6f",
+            "uuid": "7c3cebe1-e6ae-49e4-a20c-cf7bd8af8237",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "put keyword in form and click login",
-            "fullTitle": "OrangeHRM login automated testing put keyword in form and click login",
+            "title": "put keyword in form and click login and check if Welcome Admin exist",
+            "fullTitle": "OrangeHRM login automated testing put keyword in form and click login and check if Welcome Admin exist",
             "timedOut": false,
-            "duration": 4385,
+            "duration": 9999,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -97,20 +97,20 @@
             "code": "const result = await orange.submitKeywordAndGetResult();\nexpect(result).to.include(\"Welcome Admin\");",
             "err": {},
             "isRoot": false,
-            "uuid": "846bbd63-5aca-471e-a998-8b8359a61047",
+            "uuid": "4bb88fc5-92f5-49f7-a3c3-67695786efb3",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "38e034a3-8b99-411e-ba53-6028fe863c6f",
-          "846bbd63-5aca-471e-a998-8b8359a61047"
+          "7c3cebe1-e6ae-49e4-a20c-cf7bd8af8237",
+          "4bb88fc5-92f5-49f7-a3c3-67695786efb3"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 4664,
+        "duration": 10253,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000

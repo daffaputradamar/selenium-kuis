@@ -26,14 +26,14 @@ process.on("unhandledRejection", () => {});
         await orange.quit();
       });
 
-      it("find the input box and login button and check if Welcome Admin exist", async () => {
+      it("find the input box and login button", async () => {
         const result = await orange.findInputAndButton();
         expect(result.usernameEnabled).to.equal(true);
         expect(result.passwordEnabled).to.equal(true);
         expect(result.buttonText).to.include("LOGIN");
       });
 
-      it("put keyword in form and click login", async () => {
+      it("put keyword in form and click login and check if Welcome Admin exist", async () => {
         const result = await orange.submitKeywordAndGetResult();
         expect(result).to.include("Welcome Admin");
       });
